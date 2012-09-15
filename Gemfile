@@ -18,9 +18,11 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem "twitter-bootstrap-rails"
 end
 
 gem 'jquery-rails'
+gem 'haml'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
