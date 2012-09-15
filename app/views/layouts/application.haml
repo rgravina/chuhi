@@ -17,8 +17,8 @@
             %span.icon-bar
           !=link_to("Chuhi", "/", :class => "brand")
           .container-fluid.nav-collapse
-            .nav
-              !=link_to("About", "/about")
+            %ul.nav
+              %li!=link_to("About", "/about")
     .container-fluid
       .row-fluid
         != yield
