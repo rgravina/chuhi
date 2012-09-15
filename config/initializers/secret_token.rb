@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Chuhi::Application.config.secret_token = '0cd0c013f5502e1a949b697eecd1f657318b0b74a5d6a38462f8ad2833e7befc708196b1e7b26684307ed68368f6f8a412d45276e7cead9e8d6c32cb1975bff1'
+Chuhi::Application.config.secret_token = 'cc308108f59b6d5582b6b52a8d5e53d4a03d33fa3aff34ed96a14e3334c23bc32f4a3b9ff4d41fe016e99a94bd87485c97070b38cd063517f5dfa66c133eaedf'
