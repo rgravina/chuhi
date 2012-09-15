@@ -22,6 +22,15 @@
           .container-fluid.nav-collapse
             %ul.nav
               %li!=link_to("About", "/about")
+              - if !current_user
+                %li!=link_to("Sign Up", new_user_registration_path)
+                %li!=link_to("Sign In", new_user_session_path)
+              - else
+                %li!=link_to("Sign Out", destroy_user_session_path, :method => :delete)
+            - if current_user
+              %ul.nav.pull-right    
+                %li!="#{current_user.email}"
+                
     .container-fluid
       .row-fluid
         != yield
