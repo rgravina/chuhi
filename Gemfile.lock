@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/rgravina/okubo.git
+  revision: 804c1ef1490eddf45f3814f691527ed2baf34ab4
+  specs:
+    okubo (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -131,6 +137,7 @@ DEPENDENCIES
   devise
   haml
   jquery-rails
+  okubo!
   pg
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)

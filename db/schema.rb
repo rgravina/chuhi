@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120915075815) do
+ActiveRecord::Schema.define(:version => 20121028064310) do
+
+  create_table "okubo_decks", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "user_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "okubo_decks", ["user_id", "user_type"], :name => "index_okubo_decks_on_user_id_and_user_type"
+
+  create_table "okubo_items", :force => true do |t|
+    t.integer  "deck_id"
+    t.integer  "source_id"
+    t.string   "source_type"
+    t.integer  "box",           :default => 0
+    t.datetime "last_reviewed"
+    t.datetime "next_review"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  add_index "okubo_items", ["source_id", "source_type"], :name => "index_okubo_items_on_source_id_and_source_type"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

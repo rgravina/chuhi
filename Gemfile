@@ -24,6 +24,7 @@ end
 gem 'jquery-rails'
 gem 'haml'
 gem 'devise'
+gem 'okubo', :git => "git://github.com/rgravina/okubo.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
