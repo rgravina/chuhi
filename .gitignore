@@ -17,3 +17,6 @@ logfile
 
 # Mac files
 .DS_Store
+
+# Database config
+config/database.yml
