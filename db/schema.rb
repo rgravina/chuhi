@@ -11,46 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121028064310) do
-
-  create_table "okubo_decks", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "user_type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "okubo_decks", ["user_id", "user_type"], :name => "index_okubo_decks_on_user_id_and_user_type"
-
-  create_table "okubo_items", :force => true do |t|
-    t.integer  "deck_id"
-    t.integer  "source_id"
-    t.string   "source_type"
-    t.integer  "box",           :default => 0
-    t.datetime "last_reviewed"
-    t.datetime "next_review"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-  end
-
-  add_index "okubo_items", ["source_id", "source_type"], :name => "index_okubo_items_on_source_id_and_source_type"
-
-  create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+ActiveRecord::Schema.define(:version => 0) do
 
 end
