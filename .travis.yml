@@ -3,3 +3,5 @@ rvm:
   - 1.9.3
 before_script:
   - "cp config/database.example.yml config/database.yml"
+script:
+  - "RAILS_ENV=test rake db:migrate; bundle exec rake"
