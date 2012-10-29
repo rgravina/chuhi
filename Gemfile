@@ -26,6 +26,11 @@ gem 'haml'
 gem 'devise'
 gem 'okubo', :git => "git://github.com/rgravina/okubo.git"
 
+group :development do
+  gem 'rspec'
+  gem 'sqlite3'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
