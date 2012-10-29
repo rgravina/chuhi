@@ -4,4 +4,4 @@ rvm:
 before_script:
   - "cp config/database.example.yml config/database.yml"
 script:
-  - "RAILS_ENV=test rake db:migrate; bundle exec rake"
+  - "bundle exec rake db:migrate; bundle exec rake"
