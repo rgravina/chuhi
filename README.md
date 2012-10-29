@@ -1,13 +1,16 @@
 Chuhi [![Build Status](https://travis-ci.org/rgravina/chuhi.png)](https://travis-ci.org/rgravina/chuhi) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/rgravina/chuhu)
 =====
-=====
 
 Chuhi is a Rails application aimed at intermediate (Chu) and advanced (hi) learners of Japanese.
 It combines spaced repetition with collaborative learning features to help you improve your Japanese and encourage your peers to do the same.
 
+Try it!
+----
+Currently hosting this application on [Heroku](http://chuhi.herokuapp.com).
+
 Features
 ----
-* Study words you enter using a spaced repetition system.
+* Study words you enter using a spaced repetition system. (TODO, not fully implemented yet.)
 
 Thanks!
 ----
