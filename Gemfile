@@ -28,6 +28,7 @@ gem 'okubo', :git => "git://github.com/rgravina/okubo.git"
 
 group :development do
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'sqlite3'
 end
 
