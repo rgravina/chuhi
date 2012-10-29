@@ -6,6 +6,6 @@ development:
 
 test:
   adapter: sqlite3
-  database: ":memory:"
+  database: "db/test.db"
   pool: 5
   timeout: 500
