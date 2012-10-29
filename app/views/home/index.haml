@@ -3,3 +3,10 @@
     %h1="Chuhi"
     %p.lead
       A tasty beverage for intermediate and advanced learners of Japanese.
+    - if current_user
+    .row
+      .span2
+        %h2= "#{current_user.words.count} total words"
+        %h2= "#{current_user.words.untested.count} untested"
+        %h2= "#{current_user.words.expired.count} expired"
+        %h2= "#{current_user.words.known.count} known"
