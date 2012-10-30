@@ -18,14 +18,17 @@
           !=link_to("Chuhi", "/", :class => "brand")
           .container-fluid.nav-collapse
             %ul.nav
-              %li
-                <a href="#{url_for(about_path)}">About <i class='icon-info-sign'></i></a>
               - if !current_user
                 %li
                   <a href="#{url_for(new_user_session_path)}">Sign In <i class='icon-ok'></i></a>
                 %li
                   <a href="#{url_for(new_user_registration_path)}">Sign Up <i class='icon-user'></i></a>
               - else
+                %li
+                  <a href="#{url_for(words_path)}">Words<i class='icon-book'></i></a>
+              %li
+                <a href="#{url_for(about_path)}">About <i class='icon-info-sign'></i></a>
+              - if current_user
                 %li
                   <a href="#{url_for(destroy_user_session_path)}" data-method="delete" rel="nofollow">Sign Out <i class='icon-off'></i></a>
             - if current_user
