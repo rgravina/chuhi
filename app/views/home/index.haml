@@ -1,12 +1,8 @@
 %header.jumbotron.subhead#overview
   .container
+  - if !current_user
     %h1="Chuhi"
     %p.lead
       A tasty beverage for intermediate and advanced learners of Japanese.
-    - if current_user
-      .row
-        .span8
-          %h2= "#{current_user.words.count} total words"
-          %h2= "#{current_user.words.untested.count} untested"
-          %h2= "#{current_user.words.expired.count} expired"
-          %h2= "#{current_user.words.known.count} known"
+    %p
+      Chuhi is an application aimed at intermediate (Chu) and advanced (hi) learners of Japanese. It combines spaced repetition with collaborative learning features to help you improve your Japanese and encourage your peers to do the same. Sign in if you already have an account, or Sign up if not. Happy studying!
