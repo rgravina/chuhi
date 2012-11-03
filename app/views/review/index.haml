@@ -1,10 +1,7 @@
-%header.jumbotron.subhead#overview
-  .container
-    %h1="Words"
-    - if current_user
-      .row
-        .span8
-          %h2= "#{current_user.words.count} total words"
-          %h2= "#{current_user.words.untested.count} untested"
-          %h2= "#{current_user.words.expired.count} expired"
-          %h2= "#{current_user.words.known.count} known"
+.row
+  - if current_user.words.count == 0
+    .alert.alert-info
+      You have no cards in your deck!
+  - if flash[:success]
+    .alert.alert-sucess
+      =flash[:success]

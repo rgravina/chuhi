@@ -16,8 +16,13 @@ Chuhi::Application.routes.draw do
   #   resources :products
   match 'about' => 'about#index', :as => :about
   match 'review' => 'review#index', :as => :review
+  match 'deck' => 'deck#index', :as => :deck
+  match 'deck/new_card' => 'deck#new_card', :as => :new_card
   
-
+  resource :deck do
+    resources :cards
+  end
+  
   # Sample resource route with options:
   #   resources :products do
   #     member do

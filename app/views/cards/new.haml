@@ -1,0 +1,27 @@
+.row
+  .span7.offset1
+    != form_for :word, :url => {:action => "create"}, :html => {:class => ".form-horizontal.well"} do |f|
+      - if !@word.errors.empty?
+        .alert.alert-error
+          - @word.errors.full_messages.each do |e|
+            %p=e
+      %fieldset
+        %legend
+          Add Card
+        .control-group
+          !=f.label(:kanji, "Kanji", :class => "control-label")
+          .controls
+            !=f.text_field(:kanji, :class => "input-xlarge")
+        .control-group
+          !=f.label(:kana, "Kana", :class => "control-label")
+          .controls
+            !=f.text_field(:kana, :class => "input-xlarge")
+        .control-group
+          !=f.label(:translation, "Translation", :class => "control-label")
+          .controls
+            !=f.text_field(:translation, :class => "input-xlarge")
+        .form-actions
+          %button.btn.btn-primary{:type => "submit"}
+            Save
+          %a.btn{:href => url_for(deck_path)}
+            Cancel
