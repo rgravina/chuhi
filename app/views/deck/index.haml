@@ -1,25 +1,25 @@
+- if current_user.words.count == 0
+  .row
+    .alert.alert-info
+      You have no cards in your deck! Click 'Add Card' to add your first card.
 .row
   %a.btn.btn-primary{:href => url_for(:controller => :cards, :action => :new)}
     Add Card
 .row
   %br
 .row
-  - if current_user.words.count == 0
-    .alert.alert-info
-      You have no cards in your deck!
-  - else
-    %table.table
-      %thead
+  %table.table
+    %thead
+      %tr
+        %th
+          Kanji
+        %th
+          Kana
+        %th
+          Translation
+    %tbody
+      - current_user.words.each do |w|
         %tr
-          %th
-            Kanji
-          %th
-            Kana
-          %th
-            Translation
-      %tbody
-        - current_user.words.each do |w|
-          %tr
-            %td=w.kanji
-            %td=w.kana
-            %td=w.translation
+          %td=w.kanji
+          %td=w.kana
+          %td=w.translation
