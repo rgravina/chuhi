@@ -7,6 +7,8 @@
     .alert.alert-sucess
       =flash[:success]
 .row
+  %br
+.row
   .span7.offset1
     %table.table
       %thead
@@ -14,10 +16,6 @@
           %th
             Total cards:
           %td=words.count
-        %tr
-          %th
-            Not yet reviewed:
-          %td=words.untested.count
         %tr
           %th
             Expired:
