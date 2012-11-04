@@ -10,7 +10,7 @@ Currently hosting this application on [Heroku](http://chuhi.herokuapp.com).
 
 Features
 ----
-* Study words you enter using a spaced repetition system. (TODO, not fully implemented yet.)
+* Study words you enter using a spaced repetition system.
 
 Thanks!
 ----
