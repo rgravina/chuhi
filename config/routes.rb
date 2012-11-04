@@ -15,7 +15,9 @@ Chuhi::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   match 'about' => 'about#index', :as => :about
-  match 'review' => 'review#index', :as => :review
+  match 'review' => 'review#index'
+  match 'review/cards' => 'review#review'
+  match 'review/cards/:id' => 'review#review', :via => :post
   match 'deck' => 'deck#index', :as => :deck
   match 'deck/new_card' => 'deck#new_card', :as => :new_card
   

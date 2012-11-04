@@ -3,9 +3,13 @@
   - if words.count == 0
     .alert.alert-info
       You have no cards in your deck! Select 'Deck' and add your first card.
-  - elsif words.expired.count == 0
+  - elsif (words.untested.count == 0 && words.expired.count == 0)
     .alert.alert-info
       You have no cards requiring review! Select 'Deck' and add more cards, or take a well earned break.
+  - else
+    %a.btn.btn-primary{:href => url_for(:controller => :review, :action => :review)}
+      Review
+    
   - if flash[:success]
     .alert.alert-sucess
       =flash[:success]
@@ -19,6 +23,10 @@
           %th
             Total cards:
           %td=words.count
+        %tr
+          %th
+            New cards:
+          %td=words.untested.count
         %tr
           %th
             Expired:
