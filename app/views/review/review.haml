@@ -1,5 +1,5 @@
 .row
-  .span6.offset1
+  .span3.offset1
     %p
       Do you know this word?
     %h2=@word.kanji
@@ -15,4 +15,13 @@
       != token_tag nil
       %input{:type => :hidden, :name => 'id', :value => @word.id}
       %input{:type => :hidden, :name => 'answer', :value => 'no'}
-      
+  .span5
+    .row
+      %a.btn#show_answer
+        Show Answer
+    .row
+      %br
+    .row
+      #answer
+        %p=@word.kana
+        %p=@word.translation

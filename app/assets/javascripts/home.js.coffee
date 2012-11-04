@@ -6,3 +6,5 @@ $(document).ready ->
     $('#yes_form').submit()
   $('#no').bind 'click', ->
     $('#no_form').submit()
+  $('#show_answer').bind 'click', ->
+    $('#answer').fadeIn('slow')
