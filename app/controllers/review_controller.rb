@@ -14,6 +14,7 @@ class ReviewController < ApplicationController
       end
     end
     @word = current_user.words.untested.first
+    @word = current_user.words.failed.first unless @word
     @word = current_user.words.expired.first unless @word
     redirect_to(:action => :index) and return unless @word
   end
