@@ -7,8 +7,12 @@
       Yes
     %a.btn#no
       No
-    %form#yes_form{:action => url_for(:action => :review, :id => @word.id, :answer => 'yes'), :method => :post}
+    %form#yes_form{:action => url_for(:action => :review), :method => :post}
       != token_tag nil
-    %form#no_form{:action => url_for(:action => :review, :id => @word.id, :answer => 'no'), :method => :post}
+      %input{:type => :hidden, :name => 'id', :value => @word.id}
+      %input{:type => :hidden, :name => 'answer', :value => 'yes'}
+    %form#no_form{:action => url_for(:action => :review), :method => :post}
       != token_tag nil
+      %input{:type => :hidden, :name => 'id', :value => @word.id}
+      %input{:type => :hidden, :name => 'answer', :value => 'no'}
       
