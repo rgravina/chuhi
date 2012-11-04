@@ -3,6 +3,9 @@
   - if words.count == 0
     .alert.alert-info
       You have no cards in your deck! Select 'Deck' and add your first card.
+  - elsif words.expired.count == 0
+    .alert.alert-info
+      You have no cards requiring review! Select 'Deck' and add more cards, or take a well earned break.
   - if flash[:success]
     .alert.alert-sucess
       =flash[:success]
