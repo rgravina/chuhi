@@ -17,9 +17,25 @@
           Kana
         %th
           Translation
+        %th
+          Times Right
+        %th
+          Times Wrong
+        %th
+          Box
+        %th
+          Last Reviewed
+        %th
+          Next Review
     %tbody
       - current_user.words.each do |w|
+        - stats = w.stats
         %tr
           %td=w.kanji
           %td=w.kana
           %td=w.translation
+          %td=stats.times_right
+          %td=stats.times_wrong
+          %td=stats.box
+          %td=stats.last_reviewed
+          %td=stats.next_review

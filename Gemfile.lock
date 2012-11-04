@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rgravina/okubo.git
-  revision: 3d9e6bff26453fff2946f8855d00d64ce628cb59
+  revision: e3ab43cc5067efedf70a18230209d982c8045081
   specs:
     okubo (0.0.1)
 

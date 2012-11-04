@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121029051212) do
+ActiveRecord::Schema.define(:version => 20121104075107) do
 
   create_table "okubo_decks", :force => true do |t|
     t.integer  "user_id"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20121029051212) do
     t.datetime "next_review"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
+    t.integer  "times_right",   :default => 0
+    t.integer  "times_wrong",   :default => 0
   end
 
   add_index "okubo_items", ["source_id", "source_type"], :name => "index_okubo_items_on_source_id_and_source_type"
