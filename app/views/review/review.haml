@@ -1,27 +1,35 @@
 .row
-  .span3.offset1
-    %p
-      Do you know this word?
-    %h2=@word.kanji
-    %a.btn.btn-success#yes
-      Yes
-    %a.btn#no
-      No
-    %form#yes_form{:action => url_for(:action => :review), :method => :post}
-      != token_tag nil
-      %input{:type => :hidden, :name => 'id', :value => @word.id}
-      %input{:type => :hidden, :name => 'answer', :value => 'yes'}
-    %form#no_form{:action => url_for(:action => :review), :method => :post}
-      != token_tag nil
-      %input{:type => :hidden, :name => 'id', :value => @word.id}
-      %input{:type => :hidden, :name => 'answer', :value => 'no'}
-  .span5
+  .span6
     .row
-      %a.btn#show_answer
-        Show Answer
+      .span6
+        %p
+          Do you know this word?
+    .row
+      .span6
+        %h2=@word.kanji
+    .row
+      .span6
+        %a.btn.btn-success#yes
+          Yes
+        %a.btn#no
+          No
+        %form#yes_form{:action => url_for(:action => :review), :method => :post}
+          != token_tag nil
+          %input{:type => :hidden, :name => 'id', :value => @word.id}
+          %input{:type => :hidden, :name => 'answer', :value => 'yes'}
+        %form#no_form{:action => url_for(:action => :review), :method => :post}
+          != token_tag nil
+          %input{:type => :hidden, :name => 'id', :value => @word.id}
+          %input{:type => :hidden, :name => 'answer', :value => 'no'}
+  .span6
+    .row
+      .span6
+        %a.btn#show_answer
+          Show Answer
     .row
       %br
     .row
-      #answer
-        %p=@word.kana
-        %p=@word.translation
+      .span6
+        #answer
+          %p=@word.kana
+          %p=@word.translation

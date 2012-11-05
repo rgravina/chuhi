@@ -1,5 +1,5 @@
 .row
-  .span7.offset1
+  .span6
     != form_for :word, :url => {:action => "create"}, :html => {:class => ".form-horizontal.well"} do |f|
       - if !@word.errors.empty?
         .alert.alert-error

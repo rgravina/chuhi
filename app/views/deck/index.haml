@@ -1,38 +1,41 @@
 - if current_user.words.count == 0
   .row
-    .alert.alert-info
-      You have no cards in your deck! Click 'Add Card' to add your first card.
+    .span12
+      .alert.alert-info
+        You have no cards in your deck! Click 'Add Card' to add your first card.
 .row
-  %a.btn.btn-primary{:href => url_for(:controller => :cards, :action => :new)}
-    Add Card
+  .span12
+    %a.btn.btn-primary{:href => url_for(:controller => :cards, :action => :new)}
+      Add Card
 .row
   %br
 .row
-  %table.table
-    %thead
-      %tr
-        %th
-          Kanji
-        %th
-          Kana
-        %th
-          Translation
-        %th
-          Times Right
-        %th
-          Times Wrong
-        %th
-          Last Reviewed
-        %th
-          Next Review
-    %tbody
-      - current_user.words.each do |w|
-        - stats = w.stats
+  .span12
+    %table.table
+      %thead
         %tr
-          %td=w.kanji
-          %td=w.kana
-          %td=w.translation
-          %td=stats.times_right
-          %td=stats.times_wrong
-          %td=stats.last_reviewed
-          %td=stats.next_review
+          %th
+            Kanji
+          %th
+            Kana
+          %th
+            Translation
+          %th
+            Times Right
+          %th
+            Times Wrong
+          %th
+            Last Reviewed
+          %th
+            Next Review
+      %tbody
+        - current_user.words.each do |w|
+          - stats = w.stats
+          %tr
+            %td=w.kanji
+            %td=w.kana
+            %td=w.translation
+            %td=stats.times_right
+            %td=stats.times_wrong
+            %td=stats.last_reviewed
+            %td=stats.next_review
