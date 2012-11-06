@@ -8,9 +8,3 @@ $(document).ready ->
     $('#no_form').submit()
   $('#show_answer').bind 'click', ->
     $('#answer').fadeIn('slow')
-  $.noConflict();
-  set_time_zone_offset()
-
-set_time_zone_offset = ->
-  current_time = new Date()
-  $.cookie "time_zone", current_time.getTimezoneOffset()
