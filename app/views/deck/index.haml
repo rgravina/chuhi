@@ -1,8 +1,3 @@
-- if current_user.words.count == 0
-  .row
-    .span12
-      .alert.alert-info
-        You have no cards in your deck! Click 'Add Card' to add your first card.
 .row
   .span12
     %a.btn.btn-primary{:href => url_for(:controller => :cards, :action => :new)}
