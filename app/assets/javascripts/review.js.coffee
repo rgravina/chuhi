@@ -7,21 +7,14 @@ $(document).ready ->
   $('#show_answer').bind 'click', ->
     $('#answer').fadeIn('slow')
 
+Chuhi.setup_graph = (data) ->
   $("#deck-graph, #deck-graph-small").tufteBar
-    data: [[1.0,
-      label: "New"
-    ], [3.6,
-      label: "Forgotten"
-    ], [1.3,
-        label: "Expired"
-      ]]
+    data: data
     barWidth: 0.8
     barLabel: (index) ->
-      this[0] + "x"
-
+      this[0] + ""
     axisLabel: (index) ->
       this[1].label
-
     color: (index) ->
       ["#3399F3", "#CD0200", "#D47500"][index]
 

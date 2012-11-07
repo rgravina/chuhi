@@ -42,8 +42,7 @@
                     !="#{current_user.email}"
 
     .container
+      !=javascript_include_tag "application"
       != yield
       %footer
         %p!="&copy; Chuhi Project Members 2012"
-
-    !=javascript_include_tag "application"

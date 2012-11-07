@@ -22,6 +22,28 @@
       .row
         .span6
           %h2="Status"
+      .row
+        .span3
+          - words = current_user.words
+          %table.table
+            %thead
+              %tr
+                %th
+                  Total cards:
+                %td=words.count
+              %tr
+                %th
+                  New cards:
+                %td=words.untested.count
+              %tr
+                %th
+                  Expired:
+                %td=words.expired.count
+              %tr
+                %th
+                  Forgotten:
+                %td=words.failed.count  
+        .span3
           .graph#deck-graph-small
     -# Activity feed
     .span6
@@ -44,3 +66,8 @@
             %br
             %br
             %br
+
+:coffeescript
+  $(document).ready ->
+    data = [[#{words.untested.count},label: "New"], [#{words.expired.count},label: "Expired"], [#{words.failed.count},label: "Forgotten"]]
+    Chuhi.setup_graph(data)

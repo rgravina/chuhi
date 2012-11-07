@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'devise'
 gem 'okubo', :git => "git://github.com/rgravina/okubo.git"
+gem 'coffee-filter'
 
 group :development do
   gem 'rspec'

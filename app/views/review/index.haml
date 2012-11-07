@@ -38,3 +38,9 @@
           %td=words.failed.count
   .span6
     .graph#deck-graph
+
+:coffeescript
+  $(document).ready ->
+    data = [[#{words.untested.count},label: "New"], [#{words.expired.count},label: "Expired"], [#{words.failed.count},label: "Forgotten"]]
+    Chuhi.setup_graph(data)
+    
