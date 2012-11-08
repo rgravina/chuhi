@@ -1,5 +1,4 @@
 $(document).ready ->
-  $.noConflict();
   $('#yes').bind 'click', ->
     $('#yes_form').submit()
   $('#no').bind 'click', ->
@@ -17,4 +16,3 @@ Chuhi.setup_graph = (data) ->
       this[1].label
     color: (index) ->
       ["#3399F3", "#CD0200", "#D47500"][index]
-

@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require raphael
 //= require jquery.enumerable
 //= require jquery.tufte-graph
+//= require raphael
+//= require twitter/bootstrap
 //= require base
 //= require review
 
