@@ -16,4 +16,6 @@
 //= require raphael
 //= require jquery.enumerable
 //= require jquery.tufte-graph
-//= require_tree .
+//= require base
+//= require review
+
