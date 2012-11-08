@@ -17,7 +17,7 @@ That's about it right now, but once the core study features are taken care of co
 be looked at. Like to see some mockups? Head on over to [moqup](https://moqups.com/rgravina/ZwN9rqPX).
 
 Like to use the spaced repetition features in your own Ruby application? The core spaced repetition features are being worked on in
-the [okubo](https://github.com/rgravina/okubo) gem. In the future, some of the additional features and controllers/view for
+the [okubo](https://github.com/rgravina/okubo) gem. In the future, some of the additional features and controllers/views for
 reviewing words may be moved into this gem, too.
 
 Suggestions? Comments?
