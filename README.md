@@ -19,8 +19,16 @@ be looked at. Like to see some mockups? Head on over to [moqup](https://moqups.c
 Like to use the spaced repetition features in your own application? The core study features are being worked on in
 the [okubo](https://github.com/rgravina/okubo) gem.
 
+Suggestions? Comments?
+----
+
+Feel free to create a Github issue with your ideas or comments and if it fits with the goals of Chuhi it will
+probably get implemented. Got an idea you want to code on youself? Submit a pull request!
+
 Thanks!
 ----
-* Mitch Grace - for providing many of the great ideas that went into Chuhi.
 
+As with all open source projects, Chuhi is a collaborative effort. Some notable contributors include:
 
+* [Mitch Grace](https://twitter.com/Mitch_Grace) - for providing many of the great ideas that went into Chuhi and the initial discussions which give it life.
+* [Kevin Dias](https://twitter.com/diasks2) - for his limitless enthusiasm and interest in the [okubo](https://github.com/rgravina/okubo) gem.
