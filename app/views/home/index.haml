@@ -25,6 +25,10 @@
       .row
         .span3
           - words = current_user.words
+          :coffeescript
+            $(document).ready ->
+              data = [[#{words.untested.count},label: "New"], [#{words.expired.count},label: "Expired"], [#{words.failed.count},label: "Forgotten"]]
+              Chuhi.setup_graph(data)
           %table.table
             %thead
               %tr
@@ -66,8 +70,3 @@
             %br
             %br
             %br
-
-:coffeescript
-  $(document).ready ->
-    data = [[#{words.untested.count},label: "New"], [#{words.expired.count},label: "Expired"], [#{words.failed.count},label: "Forgotten"]]
-    Chuhi.setup_graph(data)
