@@ -33,3 +33,7 @@ As with all open source projects, Chuhi is a collaborative effort. Some notable 
 
 * [Mitch Grace](https://twitter.com/Mitch_Grace) - for providing many of the great ideas that went into Chuhi and the initial discussions which give it life.
 * [Kevin Dias](https://twitter.com/diasks2) - for his limitless enthusiasm and interest in the [okubo](https://github.com/rgravina/okubo) gem.
+
+Copyright and License
+---------------------
+Chuhi © 2012 by Robert Gravina. Chuhi is licensed under the MIT license. Please see the LICENSE document for more information.
