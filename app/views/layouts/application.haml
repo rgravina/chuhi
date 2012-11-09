@@ -34,12 +34,16 @@
                   <a href="#{url_for(deck_path)}">Deck<i class='icon-book'></i></a>
             - if current_user
               %ul.nav.pull-right
-                %li
-                  <a href="#{url_for(destroy_user_session_path)}" data-method="delete" rel="nofollow">Sign Out <i class='icon-off'></i></a>
                 %li.divider-vertical
-                %li
-                  %a
-                    !="#{current_user.email}"
+                %li.dropdown
+                  %a.dropdown-toggle{'data-toggle' => 'dropdown'}
+                    %i.icon-cog
+                    %b.caret
+                  %ul.dropdown-menu
+                    %li
+                      <a href="#">Profile</a>
+                    %li
+                      <a href="#{url_for(destroy_user_session_path)}" data-method="delete" rel="nofollow">Sign Out <i class='icon-off'></i></a>
 
     .container
       !=javascript_include_tag "application"
