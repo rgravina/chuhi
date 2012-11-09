@@ -25,7 +25,8 @@
       .row
         .span3
           - words = current_user.words
-          - if words.count > 0
+          - review_next = words.review_next
+          - if review_next
             :coffeescript
               $(document).ready ->
                 data = [[#{words.untested.count},label: "New"], [#{words.expired.count},label: "Expired"], [#{words.failed.count},label: "Forgotten"]]
