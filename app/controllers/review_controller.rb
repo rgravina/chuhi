@@ -13,7 +13,7 @@ class ReviewController < ApplicationController
         current_user.wrong_answer_for!(word)
       end
     end
-    @word = current_user.words.review_next
+    @word = current_user.words.review.first
     redirect_to(:action => :index) and return unless @word
   end
 end
