@@ -7,7 +7,7 @@ class ReviewController < ApplicationController
   end
   
   def review
-    reviewer = ReviewDeck.new(current_user)
+    reviewer = ReviewDeck.new(current_user, session)
     if params[:id]
       word = Word.find(params[:id])
       params[:answer] == 'yes' ? reviewer.correct(word) : reviewer.incorrect(word)
