@@ -1,3 +1,5 @@
+require File.expand_path(Rails.root + 'app/services/review_deck', __FILE__)
+
 class ReviewController < ApplicationController
   before_filter :authenticate_user!
   
@@ -5,15 +7,12 @@ class ReviewController < ApplicationController
   end
   
   def review
+    reviewer = ReviewDeck.new(current_user)
     if params[:id]
       word = Word.find(params[:id])
-      if params[:answer] == 'yes'
-        current_user.right_answer_for!(word)
-      else
-        current_user.wrong_answer_for!(word)
-      end
+      params[:answer] == 'yes' ? reviewer.correct(word) : reviewer.incorrect(word)
     end
-    @word = current_user.words.review.first
+    @word = reviewer.next
     redirect_to(:action => :index) and return unless @word
   end
 end
