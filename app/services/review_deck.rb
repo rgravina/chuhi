@@ -2,7 +2,7 @@ class ReviewDeck
   def initialize(user, session)
     @session = session
     @user = user
-    unless session.has_key?(:review) || session[:review].empty?
+    unless (session.has_key?(:review) || !session[:review].empty?)
       session[:review] = user.words.review.map(&:id)
     end
   end
