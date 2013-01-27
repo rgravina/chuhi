@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rgravina/okubo.git
-  revision: e4dc02410ed39e5cebc1b608b3bb823aaec50af8
+  revision: a9f83a71c60cc05280ed91dae5d36c4ae1eb8713
   specs:
     okubo (0.0.1)
 
@@ -48,7 +48,7 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     commonjs (0.2.6)
-    devise (2.2.1)
+    devise (2.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
@@ -61,7 +61,7 @@ GEM
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
-    jquery-rails (2.1.4)
+    jquery-rails (2.2.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.6)
@@ -122,7 +122,7 @@ GEM
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
     sass (3.2.5)
-    sass-rails (3.2.5)
+    sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
@@ -132,7 +132,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
-    therubyracer (0.11.2)
+    therubyracer (0.11.3)
       libv8 (~> 3.11.8.12)
       ref
     thor (0.16.0)

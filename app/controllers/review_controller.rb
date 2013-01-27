@@ -7,12 +7,12 @@ class ReviewController < ApplicationController
   end
   
   def review
-    reviewer = ReviewDeck.new(current_user, session)
+    @reviewer = ReviewDeck.new(current_user, session)
     if params[:id]
       word = Word.find(params[:id])
-      params[:answer] == 'yes' ? reviewer.correct(word) : reviewer.incorrect(word)
+      params[:answer] == 'yes' ? @reviewer.mark_correct(word) : @reviewer.mark_incorrect(word)
     end
-    @word = reviewer.next
+    @word = @reviewer.next
     redirect_to(:action => :index) and return unless @word
   end
 end
