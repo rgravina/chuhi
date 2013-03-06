@@ -1,4 +1,4 @@
-Chuhi [![Build Status](https://travis-ci.org/rgravina/chuhi.png)](https://travis-ci.org/rgravina/chuhi) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/rgravina/chuhi)
+Chuhi [![Build Status](https://travis-ci.org/rgravina/chuhi.png)](https://travis-ci.org/rgravina/chuhi) [![Code Climate](https://codeclimate.com/github/rgravina/chuhi.png)](https://codeclimate.com/github/rgravina/chuhi)
 =====
 
 Chuhi is a Rails application aimed at intermediate and advanced learners of Japanese.
