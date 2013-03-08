@@ -10,7 +10,8 @@ class CardsController < ApplicationController
     if @word.save
       current_user.words << @word
       flash[:success] = "Card added to your deck."
-      redirect_to(:controller => :deck)
+      # allow the user to keep adding new words
+      redirect_to(:controller => :new)
     else
       render :new
     end
