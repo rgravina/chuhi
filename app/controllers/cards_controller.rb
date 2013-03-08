@@ -11,7 +11,7 @@ class CardsController < ApplicationController
       current_user.words << @word
       flash[:success] = "Card added to your deck."
       # allow the user to keep adding new words
-      redirect_to(:controller => :new)
+      redirect_to(:action => :new)
     else
       render :new
     end
