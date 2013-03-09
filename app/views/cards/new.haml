@@ -1,8 +1,11 @@
-- if current_user.words.count == 0
-  .row
-    .span12
+.row
+  .span12
+    - if current_user.words.count == 0
       .alert.alert-info
         You have no cards in your deck! Add your first card below.
+    - if flash[:success]
+      .alert.alert-sucess
+        =flash[:success]
 .row
   .span6
     != form_for :word, :url => {:action => "create"}, :html => {:class => ".form-horizontal.well"} do |f|
