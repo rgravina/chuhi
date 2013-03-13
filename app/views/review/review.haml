@@ -2,6 +2,8 @@
   .span6
     .row
       .span6
+        %p!=session[:review]
+        %p!="#{@reviewer.num_correct} correct, #{@reviewer.num_incorrect} incorrect of #{@reviewer.num_total}."
         %p
           Do you know this word?
     .row

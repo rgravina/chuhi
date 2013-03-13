@@ -20,3 +20,6 @@ logfile
 
 # Database config
 config/database.yml
+
+# Heroku
+pull_*.dat
