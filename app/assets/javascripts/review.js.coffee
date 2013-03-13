@@ -15,4 +15,4 @@ Chuhi.setup_graph = (data) ->
     axisLabel: (index) ->
       this[1].label
     color: (index) ->
-      ["#3399F3", "#CD0200", "#D47500", "#00CB20"][index]
+      ["#3399F3", "#CD0200", "#D47500", "#3CB521"][index]
