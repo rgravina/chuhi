@@ -1,16 +1,16 @@
 .row
-  .span6
+  .span4
     .row
-      .span6
+      .span12
         -#%p!=session[:review]
         -#%p!="#{@reviewer.num_correct} correct, #{@reviewer.num_incorrect} incorrect of #{@reviewer.num_total}."
         %p
           Do you know this word?
     .row
-      .span6
+      .span12
         %h2=@word.kanji
     .row
-      .span6
+      .span12
         %a.btn.btn-success#yes
           Yes
         %a.btn#no
@@ -23,11 +23,11 @@
           != token_tag nil
           %input{:type => :hidden, :name => 'id', :value => @word.id}
           %input{:type => :hidden, :name => 'answer', :value => 'no'}
-  .span6
-    .row
-      .span6
         %a.btn#show_answer
           Show Answer
+  .span8
+    .row
+      .span6
     .row
       %br
     .row
