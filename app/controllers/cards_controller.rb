@@ -3,6 +3,7 @@ class CardsController < ApplicationController
 
   def new
     @word = Word.new
+    @last_word_added = current_user.words.last
   end
 
   def create
