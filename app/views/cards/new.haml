@@ -33,3 +33,18 @@
             Save
           %a.btn{:href => url_for(deck_path)}
             Cancel
+  .span6
+    - words = current_user.words
+    :coffeescript
+      $(document).ready ->
+        data = [[#{words.untested.count},label: "New"], [#{words.expired.count},label: "Expired"], [#{words.failed.count},label: "Forgotten"], [#{words.known.count},label: "Known"]]
+        Chuhi.setup_graph(data)
+    %table.table
+      %thead
+        %tr
+          %th
+            Cards:
+          %td=words.count
+    .span4
+      .graph#deck-graph-small
+
