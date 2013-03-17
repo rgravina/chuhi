@@ -29,7 +29,7 @@
             - else
               %ul.nav
                 %li
-                  <a href="#{url_for(review_path)}">Review<i class='icon-book'></i></a>
+                  <a href="#{url_for(:controller => :review, :action => :review)}">Review<i class='icon-book'></i></a>
                 %li
                   <a href="#{url_for(deck_path)}">Deck<i class='icon-book'></i></a>
             - if current_user
