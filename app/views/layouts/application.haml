@@ -31,7 +31,7 @@
                 %li
                   <a href="#{url_for(:controller => :review, :action => :review)}">Review<i class='icon-book'></i></a>
                 %li
-                  <a href="#{url_for(deck_path)}">Deck<i class='icon-book'></i></a>
+                  <a href="#{url_for(:controller => :cards, :action => :new)}">Add Cards<i class='icon-plus-sign-alt'></i></a>
             - if current_user
               %ul.nav.pull-right
                 %li.divider-vertical
