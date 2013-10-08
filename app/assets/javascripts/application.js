@@ -15,6 +15,7 @@
 //= require jquery.enumerable
 //= require jquery.tufte-graph
 //= require raphael
+//= require twitter/bootstrap
 //= require base
 //= require review
 

@@ -12,6 +12,7 @@ gem 'therubyracer'
 gem 'devise'
 gem 'okubo', :git => "git://github.com/rgravina/okubo.git"
 gem 'protected_attributes'
+gem 'bootstrap-sass-rails'
 
 group :production do
   gem 'rails_12factor'
